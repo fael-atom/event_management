@@ -1,0 +1,67 @@
+# Login
+POST http://localhost:3000/auth/login
+Content-Type: application/application/json
+
+{
+  "email": "partner1@user.com",
+  "password": "secret"
+}
+
+# Create Partner
+POST http://localhost:3000/partners
+Content-Type: application/application/json
+
+{
+  "name": "Partner 1",
+  "email": "partner1@user.com",
+  "password": "secret",
+  "company_name": "Company 1"
+}
+
+# Create Customer
+POST http://localhost:3000/customers
+Content-Type: application/application/json
+
+{
+  "name": "Customer 1",
+  "email": "customer1@user.com",
+  "password": "secret",
+  "address": "Address 1",
+  "phone": "1234567890"
+}
+
+# Create Event
+POST http://localhost:3000/events
+Content-Type: application/application/json
+
+{
+  "name": "Event 1",
+  "description": "Event 1",
+  "date": "2025-01-01T00:00:00.000Z",
+  "location": "Location 1"
+}
+
+# Get All Events
+GET http://localhost:3000/events
+
+# Get Event by ID
+GET http://localhost:3000/events/1
+
+# Create Event for Partner
+POST http://localhost:3000/partners/events
+Content-Type: application/application/json
+
+{
+  "name": "Event 1",
+  "description": "Event 1",
+  "date": "2025-01-01T00:00:00.000Z",
+  "location": "Location 1"
+}
+
+# Get Event by ID for Partner
+GET http://localhost:3000/partners/events/1
+
+# Get All Events for Partner
+GET http://localhost:3000/partners/events
+
+
